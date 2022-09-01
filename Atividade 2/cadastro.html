@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1>Cadastro</h1>
+				</header>
+				<section id="formUsuario">
+					<form method="post" action="https://630d40e7b37c364eb7020a54.mockapi.io/api/v1/cadastro">
+
+						<!-- Main -->
+						<div id="main">
+
+							<!-- Content -->
+								<section id="content" class="main">
+									<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+									<form action="index.html" method="post">
+										<fieldset>
+											<h2>Dados do Aluno</h2>
+											<div>
+												<label for="nomeAluno">Nome: </label>
+												<input autofocus maxlength="100"  placeholder="Digite seu nome..." id="nomeAluno" name="nomeAluno" type="text" required>
+											</div>
+											<div>
+												<label for="endereco">Endereço: </label>
+												<input autofocus maxlength="100"  placeholder="Digite seu endereço..." id="endereco" name="endereco" type="text">
+											</div>
+											<div>
+												<label for="bairro">Bairro: </label>
+												<input autofocus maxlength="100"  placeholder="Digite seu bairro..." id="bairro" name="bairro" type="text">
+											</div>
+											<div>
+												<label for="cidade">Cidade: </label>
+												<input autofocus maxlength="100"  placeholder="Digite sua cidade..." id="cidade" name="cidade" type="text">
+											</div>
+											<div>
+												<label for="numero">Número: </label>
+												<input autofocus maxlength="10"  placeholder="Digite seu numero..." id="numero" name="numero" type="number">
+											</div>
+											<div>
+												<label>CEP: </label>
+												<input placeholder="Digite seu CEP..." name="cep" pattern="[0-9]{5}-[0-9]{3}" title="Padrão do CEP: 99999-999" type="number">
+											</div>
+											<div>
+												<label for="complemento">Complemento: </label>
+												<input autofocus maxlength="100"  placeholder="Digite seu complemento..." id="complemento" name="complemento" type="text">
+											</div>
+											<div>
+												<label for="estado">Estado: </label>
+												<input autofocus maxlength="100"  placeholder="Digite seu estado..." id="estado" name="estado" type="text">
+											</div>
+											<div>
+												<label>Telefone: </label>
+												<input placeholder="Digite seu telefone..." name="telefone" pattern="([0-9]{2})[0-9]{4}-[0-9]{4}" title="Padrão do telefone: (99)9999-9999" type="number">
+											</div>
+											<div>
+												<label>Celular: </label>
+												<input placeholder="Digite seu celular..." name="celular" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" title="Padrão do celular: (99)99999-9999" type="number" required>
+											</div>
+											<div>
+												<label for="email">E-mail: </label>
+												<input autofocus maxlength="100"  placeholder="Digite seu email..." id="email" name="email" type="text" required>
+											</div>
+											<div>
+												<label for="cor">Cor: </label>
+												<select name="cor" >
+													<option value="branca">Branca</option>
+													<option value="preta">Preta</option>
+													<option value="parda">Parda</option>
+													<option value="amarela">Amarela</option>
+													<option value="indigena">Indígena</option>														
+												</select>
+											</div>
+											<hr>
+										</fieldset>
+	
+										<fieldset>
+											<h2>Dados do Pai</h2>
+											<div>
+												<label for="nomePai">Nome do pai: </label>
+												<input autofocus maxlength="100"  placeholder="Digite o nome do pai..." id="nomePai" name="nomePai" type="text" required>
+											</div>
+											<div>
+												<label for="dataPai">Data de nascimento: </label>
+												<input id="dataPai" name="dataNasciPai" type="date" min="1901-01-01">
+											</div>
+											<div>
+												<label for="natuPai">Naturalidade do pai: </label>
+												<input autofocus maxlength="100"  placeholder="Digite a naturalidade do pai..." id="natuPai" name="natuPai" type="text" required>
+											</div>
+											<div>
+												<label for="instruPai">Instrução do pai: </label>
+												<input autofocus maxlength="100"  placeholder="Digite a instrução do pai..." id="instruPai" name="instruPai" type="text" required>
+											</div>
+											<div>
+												<label for="profiPai">Profissão do pai: </label>
+												<input autofocus maxlength="100"  placeholder="Digite a profissão do pai..." id="profiPai" name="profiPai" type="text" required>
+											</div>
+											<div>
+												<label>Celular do pai: </label>
+												<input placeholder="Digite o celular do pai..." name="celularPai" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" title="Padrão do celular: (99)99999-9999" type="number" required>
+											</div>
+											<div>
+												<label for="emailPai">E-mail do pai: </label>
+												<input autofocus maxlength="100"  placeholder="Digite o email do pai..." id="emailPai" name="emailPai" type="text" required>
+											</div>
+											<div>
+												<label>CPF do pai: </label>
+												<input placeholder="Digite o CPF do pai..." name="cpfPai" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" title="Padrão do CPF: 999.999.999-99">
+											</div>
+											<div>
+												<label>Responsável financeiro: </label>
+												<input checked value="S" name="optPai" id="simPai" type="radio"><label for="simPai">Sim</label>
+												<input value="N" name="optPai" id="naoPai"type="radio"><label for="naoPai">Não</label>
+											</div>
+											<hr>
+										</fieldset>
+	
+										<fieldset>
+											<h2>Dados da Mãe</h2>
+											<div>
+												<label for="nomeMae">Nome da mãe: </label>
+												<input autofocus maxlength="100"  placeholder="Digite o nome da mãe..." id="nomeMae" name="nomeMae" type="text" required>
+											</div>
+											<div>
+												<label for="dataMae">Data de nascimento: </label>
+												<input id="dataPai" name="dataNasciMae" type="date" min="1901-01-01">
+											</div>
+											<div>
+												<label for="natuMae">Naturalidade da mãe: </label>
+												<input autofocus maxlength="100"  placeholder="Digite a naturalidade da mãe..." id="natuMae" name="natuMae" type="text" required>
+											</div>
+											<div>
+												<label for="instruMae">Instrução da mãe: </label>
+												<input autofocus maxlength="100"  placeholder="Digite a instrução da mãe..." id="instruMae" name="instruMae" type="text" required>
+											</div>
+											<div>
+												<label for="profiMae">Profissão da mãe: </label>
+												<input autofocus maxlength="100"  placeholder="Digite a profissão da mãe..." id="profiMae" name="profiMae" type="text" required>
+											</div>
+											<div>
+												<label>Celular da mãe: </label>
+												<input placeholder="Digite o celular da mãe..." name="celularMae" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" title="Padrão do celular: (99)99999-9999" type="number" required>
+											</div>
+											<div>
+												<label for="emailMae">E-mail da mãe: </label>
+												<input autofocus maxlength="100"  placeholder="Digite o email da mãe..." id="emailMae" name="emailMae" type="text" required>
+											</div>
+											<div>
+												<label>CPF da mãe: </label>
+												<input placeholder="Digite o CPF da mãe..." name="cpfMae" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" title="Padrão do CPF: 999.999.999-99">
+											</div>
+											<div>
+												<label>Responsável financeiro: </label>
+												<input checked value="S" name="optMae" id="simMae" type="radio"><label for="simMae">Sim</label>
+												<input value="N" name="optMae" id="naoMae"type="radio"><label for="naoMae">Não</label>
+											</div>
+											<hr>
+										</fieldset>
+
+										<fieldset>
+											<h2>Dados do Curso</h2>													
+											<div>
+												<label for="nomeCurso">Curso escolhido: </label>
+												<select name="nomeCurso">
+													<option value="computacao">Computação</option>
+													<option value="musica">Música</option>
+													<option value="danca">Dança</option>														
+												</select>
+											</div>
+											<div>
+												<label for="dataIng">Data de ingresso: </label>
+												<input id="dataIng" name="dataIngresso" type="date" min="1901-01-01" required>
+											</div>
+											<div>
+												<label for="valor">Valor do curso: </label>
+												<input placeholder="Valor do curso..." id="valor" name="valor" type="number" required>
+											</div>
+											<div>
+												<label for="pagamento">Forma de pagamento: </label>
+												<select name="pagamento">
+													<option value="uma">1x</option>
+													<option value="duas">2x</option>
+													<option value="tres">3x</option>														
+												</select>
+											</div>
+											<div>
+												<br>
+												<button type="submit">Salvar</button>
+												<button type="reset">Limpar</button>
+											</div>
+											<hr>
+										</fieldset>
+									</form>
+								</section>
+						</div>
+
+						
+					</form>
+				</section>				
+
+			<!-- Footer -->
+				<footer id="footer">
+					<section>							
+					</section>						
+				</footer>
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html>
