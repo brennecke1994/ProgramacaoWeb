@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <title>Atividade 05</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">            
+            <div class="col-md-12 text-center">
+                <label class="form-label col-md-12" style="font-size: 30px;">Exercício 1</label>
+                <label class="form-label" style="font-size: 25px;">Crie duas variáveis com o valor 10 e 100. Mostre o valor da soma, subtração, divisão e multiplicação em um ALERT</label>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button onclick="exercicio1()" class="btn btn-dark" style="margin-top: 10px; margin-bottom:10px" >Mostrar exercício 1</button>
+            </div>
+            <hr>
+
+            <div class="col-md-12 text-center">
+                <label class="form-label col-md-12" style="font-size: 30px;">Exercício 2</label>
+                <label class="form-label" style="font-size: 25px;">Crie um loop que mostre na tela o valor de 10 a 100.</label>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button onclick="exercicio2()" class="btn btn-dark" style="margin-top: 10px; margin-bottom:10px" >Mostrar valores</button>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table">
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+
+            <div class="col-md-12 text-center">
+                <label class="form-label col-md-12" style="font-size: 30px;">Exercício 3</label>
+                <label class="form-label" style="font-size: 25px;">Crie uma variável que recebe o valor fixo 5. Mostre a tabuada desse número.</label>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button onclick="exercicio3()" class="btn btn-dark" style="margin-top: 10px" >Mostrar tabuada</button>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table">
+                    <tbody id="tbody1">
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+
+            <div class="col-md-12 text-center">
+                <label class="form-label col-md-12" style="font-size: 30px;">Exercício 4</label>
+                <label class="form-label" style="font-size: 25px;">Adapte o exercício anterior para o valor não ser mais fixo. O valor deve ser recebido de um campo da tela.</label>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <label class="form-label">Digite o número da tabuada</label>
+                <input class="form-control" id="numTabuada" type="number">
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button onclick="exercicio4()" class="btn btn-dark" style="margin-top: 10px" >Mostrar tabuada</button>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table">
+                    <tbody id="tbody2">
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+
+            <div class="col-md-12 text-center">
+                <label class="form-label col-md-12" style="font-size: 30px;">Exercício 5</label>
+                <label class="form-label" style="font-size: 25px;">Fazer um calculadora que receberá dois valores e a operação (+,-,*,/). Ao clicar no botão calcular o resultado é demonstrado.</label>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <label class="form-label">Número 1</label>
+                <input class="form-control" id="numero1" type="number">
+            </div>
+
+            <div class="col-md-3 text-center">
+                <label class="form-label">Número 2</label>
+                <input class="form-control" id="numero2" type="number">
+            </div>
+
+            <div class="col-md-3 text-center">
+                <label class="form-label">Tipo de operação</label>
+                <div>
+                    <select name="operacao" id="operacao">
+                        <option value="soma">Soma</option>
+                        <option value="subtracao">Subtração</option>
+                        <option value="multiplicacao">Muiltiplicação</option>
+                        <option value="divisao">Divisão</option>
+                    </select>
+                </div>                
+            </div>
+
+            <div class="col-md-3 text-center">
+                <label class="form-label col-md-12">Resultado</label>
+                <input class="form-control" id="resultado" type="number">
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button onclick="exercicio5()" class="btn btn-dark" style="margin-top: 10px; margin-bottom:10px" >Calcular</button>
+            </div>
+            <hr>
+
+            <div class="col-md-12 text-center">
+                <label class="form-label col-md-12" style="font-size: 30px;">Exercício 6</label>
+                <label class="form-label" style="font-size: 25px;">Percorra o array [1,2,3,4,5,6,7,8,9,10] e exiba apenas os valores pares.</label>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button onclick="exercicio6()" class="btn btn-dark" style="margin-top: 10px" >Mostrar pares</button>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table">
+                    <tbody id="tbody3">
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+
+            <div class="col-md-12 text-center" style="margin-bottom: 30px;">
+                <label class="form-label col-md-12" style="font-size: 30px;">Exercício 7</label>
+                <label class="form-label" style="font-size: 25px;">Calcular valor final de carro novo</label>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <label class="form-label col-md-12">Custo de fábrica</label>
+                <input class="form-control" id="custoFab" type="number">
+            </div>
+
+            <div class="col-md-3 text-center">
+                <label class="form-label col-md-12">Percentual do distribuidor</label>
+                <input class="form-control" id="percDistr" type="number">
+            </div>
+
+            <div class="col-md-3 text-center">
+                <label class="form-label col-md-12">Percentual dos impostos</label>
+                <input class="form-control" id="percImpostos" type="number">
+            </div>
+
+            <div class="col-md-3 text-center">
+                <label class="form-label col-md-12">Valor final</label>
+                <input class="form-control" id="valorFinal" type="number">
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button onclick="exercicio7()" class="btn btn-dark" style="margin-top: 10px; margin-bottom: 30px;" >Calcular valor final</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function exercicio1() {
+            var num1 = 10;
+            var num2 = 100;
+            var soma, sub, div, mult;
+
+            soma = num1 + num2;
+            sub = num1 - num2;
+            div = num1 / num2;
+            mult = num1 * num2;
+
+            return alert("\nSoma: "+soma+"\nSubtração: "+sub+"\nDivisão: "+div+"\nMultiplicação: "+mult)
+        }
+
+        function exercicio2(){
+            var valores;
+            var tbody = document.getElementById('tbody');
+            tbody.innerHTML = '';
+            for (let valor = 10; valor <= 100; valor++) {
+                valores = valor;
+                var tr = document.createElement('tr');
+                var td1 = document.createElement('td');
+                td1.innerHTML = valor;
+
+                tr.appendChild(td1);
+                tbody.appendChild(tr);
+            }
+            function limpar(){
+                tbody.innerHTML = '';
+            }
+            setTimeout(limpar,5000);
+        }
+
+        function exercicio3(){
+            var resultado;
+            var tbody = document.getElementById('tbody1');
+            tbody.innerHTML = '';
+            for (let valor = 1; valor <= 10; valor++) {
+                resultado = 5 * valor;
+                var tr = document.createElement('tr');
+                var td1 = document.createElement('td');
+                var td2 = document.createElement('td');
+                var td3 = document.createElement('td');
+                var td4 = document.createElement('td');
+                td1.innerHTML = "5";
+                td2.innerHTML = "x";
+                td3.innerHTML = valor;
+                td4.innerHTML = resultado;
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                tbody.appendChild(tr);
+            }
+            function limpar(){
+                tbody.innerHTML = '';
+            }
+            setTimeout(limpar,5000);
+        }
+
+        function exercicio4(){
+            var num = document.getElementById('numTabuada');
+            var resultado;
+            var tbody = document.getElementById('tbody2');
+            tbody.innerHTML = '';
+            for (let valor = 1; valor <= 10; valor++) {
+                resultado = num.value * valor;
+                var tr = document.createElement('tr');
+                var td1 = document.createElement('td');
+                var td2 = document.createElement('td');
+                var td3 = document.createElement('td');
+                var td4 = document.createElement('td');
+                td1.innerHTML = num.value;
+                td2.innerHTML = "x";
+                td3.innerHTML = valor;
+                td4.innerHTML = resultado;
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                tbody.appendChild(tr);
+            }
+            function limpar(){
+                tbody.innerHTML = '';
+            }
+            setTimeout(limpar,5000);
+        }
+
+        function exercicio5(){
+            var oper = document.getElementById('operacao');
+            var num1 = document.getElementById('numero1');
+            var num2 = document.getElementById('numero2');
+            switch (oper.value) {
+                case "soma":
+                    let resultado = parseFloat(num1.value) + parseFloat(num2.value);
+                    document.getElementById('resultado').value = resultado;
+                break;
+                case "subtracao":
+                    document.getElementById('resultado').value = num1.value-num2.value;
+                break;
+                case "multiplicacao":
+                    document.getElementById('resultado').value = num1.value*num2.value;
+                break;
+                case "divisao":
+                    document.getElementById('resultado').value = num1.value/num2.value;
+                break;
+            }
+        }
+
+        function exercicio6(){
+            var numArray=[1,2,3,4,5,6,7,8,9,10];
+            var tbody = document.getElementById('tbody3');
+            tbody.innerHTML = '';
+
+            for (let i = 0; i < numArray.length; i++) {
+                numAtual = numArray[i];
+
+                if(numAtual % 2 == 0){
+                    var tr = document.createElement('tr');
+                    var td1 = document.createElement('td');
+                    td1.innerHTML = numAtual;
+
+                    tr.appendChild(td1);
+                    tbody.appendChild(tr);
+                }
+            }
+            function limpar(){
+                tbody.innerHTML = '';
+            }
+            setTimeout(limpar,5000);
+        }
+
+        function exercicio7(){
+            var custoFab = document.getElementById('custoFab');
+            var perDist = document.getElementById('perDist');
+            var perImp = document.getElementById('perImp');
+            
+            var valorFinal = parseFloat(custoFab.value) + parseFloat((custoFab.value * perDist.value)) + parseFloat((custoFab.value * perImp.value));
+
+            document.getElementById('valorFinal').value = valorFinal;
+        }
+    </script>
+  </body>
+</html>
