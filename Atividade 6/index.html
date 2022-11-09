@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <title>Atividade 06</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+                <div class="col-md-12">
+                    <label for="input1" class="form-label mb-2">Nome</label>
+                    <input type="text" class="form-control" id="input1" name="nome" placeholder="Insira seu nome ..." required>
+                </div>
+                <div class="col-md-12">
+                    <label for="input2" class="form-label">Telefone</label>
+                    <input type="text" class="form-control mb-2" id="input2" name="telefone" placeholder="Insira seu telefone..." required>
+                </div>
+                <div class="col-md-12">
+                    <label for="input3" class="form-label mb-2">Email</label>
+                    <input type="email" class="form-control" id="input3" name="email" placeholder="Insira seu e-mail..." required>
+                </div>            
+                <div class="col-md-12 text-center" style="margin: 15px;">
+                    <button type="button" class="btn btn-primary" onclick="salvarPessoa()">Salvar</button>
+                    <button type="submit" class="btn btn-primary" onclick="sincronizar()">Sincronizar</button>                
+                </div>
+            </div>
+            <hr>            
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Email</th>                            
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js">
+        </script>
+        
+        <script>
+            const urlAPI = "https://630d40e7b37c364eb7020a54.mockapi.io/api/v1";
+            var pessoasArray = [];
+
+            class Pessoas{
+                constructor(nome, telefone, email){
+                    this.nome = nome;
+                    this.telefone = telefone;
+                    this.email = email;                
+                }
+            }
+
+            function sincronizar() {
+                fetch('https://630d40e7b37c364eb7020a54.mockapi.io/api/v1/pessoas', {
+                    method: 'POST',
+                    headers: {
+                            'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(pessoasArray),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        alert('Sincronizado com sucesso!');
+                        location.reload();
+                    })
+                    .catch((error) => {
+                        alert("Ocorreu um erro a o sincronizar!");
+                    });
+            }
+            function salvarPessoa(){
+                let pessoaAtual = new Pessoas(document.getElementById('input1').value,
+                                                document.getElementById('input2').value,
+                                                document.getElementById('input3').value);
+
+                document.getElementById('input1').value = "";
+                document.getElementById('input2').value = "";
+                document.getElementById('input3').value = "";
+
+                pessoasArray.push(pessoaAtual);
+                atualizarTabela();
+            }
+            function atualizarTabela(){
+                let pessoaPega;
+                var tbody = document.getElementById('tbody');
+                tbody.innerHTML = '';
+
+                for (let i = 0; i < pessoasArray.length; i++) {
+                    pessoaPega = pessoasArray[i];
+        
+                    let tr = document.createElement('tr');
+                    let tdNome = document.createElement('td');
+                    let tdTelefone = document.createElement('td');
+                    let tdEmail = document.createElement('td');                
+
+                    tdNome.innerHTML = pessoaPega.nome;
+                    tdTelefone.innerHTML = pessoaPega.telefone;
+                    tdEmail.innerHTML = pessoaPega.email;                
+
+                    tr.appendChild(tdNome);
+                    tr.appendChild(tdTelefone);
+                    tr.appendChild(tdEmail);                
+                    tbody.appendChild(tr);
+                }
+            }
+        </script>
+    </body>
+</html>
