@@ -1,0 +1,54 @@
+<p style="text-align: center;">Exercício 4</p>
+<form>
+    <div class="form-group">
+        <div>
+            <label for="title">Nome do segurado:</label>
+        </div>        
+        <div>
+            <input type="text" name="nome" [(ngModel)]="nome" placeholder="Nome" required>
+        </div>
+        <br/>
+    </div>
+    <div class="form-group">
+        <div>
+            <label for="title">Sexo:</label>
+        </div>        
+        <div>
+            <input type="text" name="sexo" [(ngModel)]="sexo" placeholder="Sexo" required>
+        </div>
+        <br/>
+    </div>
+    <div class="form-group">
+        <div>
+            <label for="title">Idade:</label>
+        </div>        
+        <div>
+            <input type="number" name="idade" [(ngModel)]="idade" placeholder="idade" required>
+        </div>
+        <br/>
+    </div>
+    <div class="form-group">
+        <div>
+            <label for="title">Valor do automóvel:</label>
+        </div>        
+        <div>
+            <input type="number" name="valor" [(ngModel)]="valor" placeholder="valor" required>
+        </div>
+        <br/>
+    </div>
+    <div class="form-group">
+        <div>
+            <label for="title">Valor da apólice:</label>
+        </div>        
+        <div>
+            <input type="number" name="final" [(ngModel)]="final" placeholder="Valor da apólice" required>
+        </div>
+        <br/>
+    </div>    
+    <div class="form-group">       
+        <div>
+            <button (click)="calcular()" class="btn btn-primary" style="margin: 10px;">Calcular</button>
+        </div>
+        <br/>
+    </div>    
+</form>
